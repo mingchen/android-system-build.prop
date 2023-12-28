@@ -2,7 +2,7 @@
 
 Android /system/build.prop from official ROMs.
 
-Include both raw `build.prop` and JSON format [props.json](props.json) for easy to use.
+Include both raw `build.prop` and JSON format [props.json](https://raw.githubusercontent.com/mingchen/android-system-build.prop/main/props.json) for easy to use.
 
 ## props Folder Structure
 
