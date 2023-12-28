@@ -2,13 +2,17 @@
 
 Android /system/build.prop from official ROMs.
 
-## Folder structure
+Include both raw `build.prop` and JSON format [props.json](props.json) for easy to use.
+
+## props Folder Structure
 
 ```
-<Device Model>/<Android Version>/<Build ID>/build.prop
+props/<Vendor>/<Device Model>/<Android Version>/<Build ID>/build.prop
 ```
 
-`<Build ID>` is inside `build.prop`, the key is `ro.build.id`. e.g.
+`<Device Model>`, `<Build ID>` (or `Build number`) can be found in `Settings` -> `About phone`.
+
+`<Build ID>` also inside `build.prop`, the key is `ro.build.id`. e.g.
 
 ```
 ro.build.id=QP1A.191005.007.A3
@@ -25,7 +29,7 @@ Pixel-XL/10.0.0/QP1A.191005.007.A3/build.prop
 1. Download OTA image from [Factory Images for Nexus and Pixel Devices](https://developers.google.com/android/images)
 
 
-2. Extract OTA image with [android-ota-extractor](https://github.com/tobyxdd/android-ota-payload-extractor), for example. The following command extract "marlin" for Pixel XL version 10.0.0 (QP1A.191005.007.A3, Dec 2019)
+2. Unpack OTA image with [android-ota-extractor](https://github.com/tobyxdd/android-ota-payload-extractor). For example, The following command extract "marlin" for Pixel XL version 10.0.0 (QP1A.191005.007.A3, Dec 2019):
 
 ```sh
 $ android-ota-extractor marlin-ota-qp1a.191005.007.a3-23002a57.zip
